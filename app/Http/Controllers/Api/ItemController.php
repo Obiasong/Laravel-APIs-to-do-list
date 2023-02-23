@@ -20,16 +20,8 @@ class ItemController extends Controller
 
     public function index(): JsonResponse
     {
-        //Check that status is valid
-        //This is important for security and to ensure that the filter data is sanitized.
-        if (request()->has('status') && !$this->isStatusValid(request('status'))) {
-            return response()->json([
-                'items' => ItemResource::collection(Item::oldest()->get())
-            ]);
-        }
-
         return response()->json([
-            'items' => ItemResource::collection(Item::oldest()->filter(request(['status']))->get())
+            'items' => ItemResource::collection(Item::oldest()->filter(request(['search']))->get())
         ]);
     }
 
@@ -115,7 +107,7 @@ class ItemController extends Controller
      */
     public function completeItem(Item $item): JsonResponse
     {
-        $item->update(['status' => 'completed']);
+        $item->complete();
         return response()->json([
             'item' => new ItemResource($item),
             'message' => 'Item completed',
@@ -131,30 +123,18 @@ class ItemController extends Controller
     public function activateItem(Item $item): JsonResponse
     {
 //        Status of a completed items can not be changed
-        if ($item->status == 'completed') {
+        if ($item->isCompleted()) {
             return response()->json([
                 'item' => new ItemResource($item),
                 'message' => 'You can not change the status of a completed item',
             ]);
         }
-        //update state to active
-        $item->update(['status' => 'active']);
+        //activate item
+        $item->activate();
         return response()->json([
             'item' => new ItemResource($item),
             'message' => 'Item is now active',
         ]);
     }
-
-    /**
-     * Check if the status is found in the global constants.status array to confirm its validity
-     *
-     * @param string $status
-     * @return bool
-     */
-    protected function isStatusValid(string $status): bool
-    {
-        return in_array($status, config('constants.status'));
-    }
-
 
 }
