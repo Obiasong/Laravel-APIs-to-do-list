@@ -11,8 +11,8 @@ class Item extends Model
 
     //update boot method of AppService provider with Model::unguard if you want to ignore $fillable array
     protected $fillable = ['item', 'description', 'status', 'photo'];
-    protected $status = [
-        0, 1, 2
+    protected $casts = [
+        'status' => ['pending' => 'pending', 'active' => 'active', 'completed' => 'completed']
     ];
 
     /**

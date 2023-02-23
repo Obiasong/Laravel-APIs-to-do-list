@@ -17,7 +17,7 @@ return new class extends Migration {
             $table->string('item');
             $table->longText('description');
             $table->string('photo')->nullable();
-            $table->integer('status')->default(0);
+            $table->string('status')->default('pending');
             $table->timestamps();
         });
     }
