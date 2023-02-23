@@ -21,4 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::prefix('v1')->group(function () {
     Route::apiResource('items', ItemController::class);
+    Route::get('items/{item}/complete', [ItemController::class, 'completeItem']);
+    Route::get('items/{item}/activate', [ItemController::class, 'activateItem']);
 });

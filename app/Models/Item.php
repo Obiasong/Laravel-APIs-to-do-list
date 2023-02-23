@@ -11,9 +11,6 @@ class Item extends Model
 
     //update boot method of AppService provider with Model::unguard if you want to ignore $fillable array
     protected $fillable = ['item', 'description', 'status', 'photo'];
-    protected $casts = [
-        'status' => ['pending' => 'pending', 'active' => 'active', 'completed' => 'completed']
-    ];
 
     /**
      * Filter items base on the status
@@ -23,7 +20,11 @@ class Item extends Model
     public function scopeFilter($query, array $filters)
     {
         if ($filters['status'] ?? false) {
-            $query->where('status', $filters['status']);
+            $query->where('status', 'like', $filters['status']);
         }
+    }
+
+    private function updateStatus(){
+        $this->update(['status' => 'status']);
     }
 }

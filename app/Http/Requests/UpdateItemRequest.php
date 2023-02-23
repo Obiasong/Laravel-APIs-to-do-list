@@ -8,7 +8,7 @@ use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Validation\ValidationException;
 
-class StoreItemRequest extends FormRequest
+class UpdateItemRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -30,7 +30,7 @@ class StoreItemRequest extends FormRequest
         return [
             'item' => ['required', 'min:2'],
             'description' => 'required',
-            'photo' => ['required', 'file', 'mimes:png,jpeg,jpg', 'max:5000']
+            'photo' => ['file', 'mimes:png,jpeg,jpg', 'max:5000']
         ];
     }
 
