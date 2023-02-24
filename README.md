@@ -1,7 +1,7 @@
 ## To-do List App
 A Laravel 9 based backend and React.js based frontend application to manage items on a to-do list. An item has a title, description, status and a photo.
 
-# App Characteristics
+## App Characteristics
 <li>Add an item</li>
 <li>View the details of an item (click on the title of the item)</li>
 <li>Being able to edit an item</li>
@@ -17,13 +17,14 @@ A Laravel 9 based backend and React.js based frontend application to manage item
 
 ## Installation
 
-## Backend setup
+### Backend setup
 ```
 git clone the repo
 cd to your project root from the console
 copy the .env.example file to .env (cp .env.example .env).
 
 #Setup database 
+Create your local database
 Enter your database information in the .env file as required
 
 Run composer install or php composer.phar install
