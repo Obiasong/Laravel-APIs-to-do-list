@@ -1,5 +1,5 @@
 ## To-do List App
-A Laravel 9 based backend and React.js based frontend application to manage items on a to-do list. An item has a title, description, status and a photo.
+A Laravel 9 (check requirements for your local environment) based backend and React.js based frontend application to manage items on a to-do list. An item has a title, description, status and a photo.
 
 ## App Characteristics
 <li>Add an item</li>
