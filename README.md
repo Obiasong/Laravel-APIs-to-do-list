@@ -1,7 +1,14 @@
 ## To-do List App
+## Table of contents
+* [General info](#general-info)
+* [Setup](#setup)
+* [Notice](#notice)
+* [License](#license)
+
+## General info 
 A Laravel 9 (check requirements for your local environment <a href='https://laravel.com/docs/9.x/releases'>requirements</a>) based backend and React.js based frontend application to manage items on a to-do list. An item has a title, description, status and a photo.
 
-## App Characteristics
+### App Characteristics
 <li>Add an item</li>
 <li>View the details of an item (click on the title of the item)</li>
 <li>Being able to edit an item</li>
@@ -15,7 +22,7 @@ A Laravel 9 (check requirements for your local environment <a href='https://lara
 <li>view only pending (not completed or in progress) items</li>
 
 
-## Installation
+## Setup
 
 ### Backend setup
 ```
