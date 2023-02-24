@@ -17,7 +17,7 @@ A Laravel 9 based backend and React.js based frontend application to manage item
 
 ## Installation
 
-# Backend setup
+## Backend setup
 ```
 git clone the repo
 cd to your project root from the console
@@ -41,6 +41,14 @@ php artisan migrate:refresh --seed
 You can access the app via localhos:8000 or any port specified when running serve command
 You will be greeted with the default laravel welcome page.
 Run php artisan route:list to see all the routes (add "--path=api" flag to see just api/ routes). 
+```
+### Testing and code coverage
+```
+php artisan test or vendor/bin/phpunit
+```
+
+```
+vendor/bin/phpunit --coverage-text
 ```
 ## Notice
 Errors are checked at each level and the code includes 100% test coverage of the controllers.<br/>
