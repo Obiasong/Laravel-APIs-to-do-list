@@ -49,4 +49,4 @@ I will be adding that soon
 
 ## License
 
-The QuizApp is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The To-do list app is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
