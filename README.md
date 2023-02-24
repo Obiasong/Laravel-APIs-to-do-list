@@ -2,17 +2,17 @@
 A Laravel 9 based backend and React.js based frontend application to manage items on a to-do list. An item has a title, description, status and a photo.
 
 # App Characteristics
--Add an item;
--View the details of an item (click on the title of the item);
--Being able to edit an item;
--A photo uploaded with the item;
--The option to mark an item as active (in progress);
--The option to mark an item as complete;
--Remove an item from the list;
--Search Item based on item title;
--View only completed items;
--View only active (in progress);
--view only pending (not completed or in progress) items;
+<li>Add an item</li>
+<li>View the details of an item (click on the title of the item)</li>
+<li>Being able to edit an item</li>
+<li>A photo uploaded with the item</li>
+<li>The option to mark an item as active (in progress)</li>
+<li>The option to mark an item as complete</li>
+<li>Remove an item from the list</li>
+<li>Search Item based on item title</li>
+<li>View only completed items</li>
+<li>View only active (in progress)</li>
+<li>view only pending (not completed or in progress) items</li>
 
 
 ## Installation
@@ -38,12 +38,12 @@ php artisan migrate:refresh --seed
 ```
 
 ```
-You can access the app (localhos:8000)
+You can access the app via localhos:8000 or any port specified when running serve command
 You will be greeted with the default laravel welcome page.
 Run php artisan route:list to see all the routes (add "--path=api" flag to see just api/ routes). 
 ```
 ## Notice
-Errors are checked at each level and the code includes 100% test coverage of the controllers
+Errors are checked at each level and the code includes 100% test coverage of the controllers.<br/>
 No security is implemented on this,  Laravel Sanctum can be easily integrated for the API Authentication and Token management.
 I will be adding that soon
 
