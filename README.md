@@ -16,11 +16,7 @@ A Laravel 9 (check requirements for your local environment <a href='https://lara
 <li>The option to mark an item as active (in progress)</li>
 <li>The option to mark an item as complete</li>
 <li>Remove an item from the list</li>
-<li>Search Item based on item title</li>
-<li>View only completed items</li>
-<li>View only active (in progress)</li>
-<li>view only pending (not completed or in progress) items</li>
-
+<li>View status of the item (completed or pending)</li>
 
 ## Setup
 
